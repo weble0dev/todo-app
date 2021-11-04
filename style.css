@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgb(47, 113, 255);
+
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+button, span {
+    cursor: pointer;
+}
+
+.app {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    min-width: 600px;
+    width: 30%;
+
+    margin: 0 auto;
+
+    background-color: #ffffff;
+
+    border-radius: 6px;
+
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.app_header,
+.app_body,
+.app_footer {
+    display: flex;
+
+    width: 100%;
+
+    padding: 2%;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 30px;
+    min-width: 26px;
+    width: 2vw;
+
+    max-height: 30px;
+    min-height: 26px;
+    height: 2vw;
+
+    color: #ffffff;
+
+    border: none;
+    border-radius: 50%;
+
+    outline: none;
+}
+
+button svg {
+    width: 75%;
+    
+    fill: #ffffff;
+}
+
+button.red {
+    background-color: rgb(168, 26, 26);
+}
+
+button.red:hover {
+    background-color: rgb(119, 7, 7);
+}
+
+button.blue {
+    background-color: rgb(47, 113, 255);
+}
+
+button.blue:hover {
+    background-color: rgb(21, 75, 190);
+}
+
+.app_header {
+    text-transform: uppercase;
+}
+
+.app_body {
+    max-height: 300px;
+    min-height: 300px;
+
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.app_body ul {
+    width: 100%;
+
+    list-style: none;
+}
+
+.app_body ul span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 30px;
+    min-width: 26px;
+    width: 2vw;
+
+    max-height: 30px;
+    min-height: 26px;
+    height: 2vw;
+
+    border: solid 1px rgb(47, 113, 255);
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.app_body ul span svg {
+    fill: rgb(47, 113, 255);
+}
+
+.app_body ul span:hover {
+    background-color: rgba(47, 113, 255, .25);
+}
+
+.app_body ul li {
+    display: flex;
+    justify-content: space-between;
+    
+    width: 100%;
+
+    margin-bottom: 2%;
+    padding: 2%;
+
+    background-color: #ebebeb;
+    border-radius: 4px;
+}
+
+.app_body ul li:last-child {
+    margin-bottom: 0;
+}
+
+.app_body ul li div {
+    width: 85%;
+
+    padding: 4px 0 0 0;
+
+    margin: 0 auto;
+}
+
+.app_footer {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app_footer input {
+    width: 85%;
+
+    padding: 2%;
+
+    border: solid #cccccc 1px;
+    border-radius: 4px;
+
+    outline: #adadad;
+}
