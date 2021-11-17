@@ -18,6 +18,12 @@ body {
 
 button, span {
     cursor: pointer;
+
+    transition: all .1s ease-in;
+}
+
+button:hover, span:hover {
+    transform: scale(.9);
 }
 
 .app {
@@ -72,6 +78,8 @@ button svg {
     width: 75%;
     
     fill: #ffffff;
+
+    pointer-events: none;
 }
 
 button.red {
@@ -103,6 +111,8 @@ button.blue:hover {
 }
 
 .app_body ul {
+    position: relative;
+
     width: 100%;
 
     list-style: none;
@@ -127,12 +137,8 @@ button.blue:hover {
     cursor: pointer;
 }
 
-.app_body ul span svg {
-    fill: rgb(47, 113, 255);
-}
-
-.app_body ul span:hover {
-    background-color: rgba(47, 113, 255, .25);
+.app_body ul span.checked {
+    background-color: rgb(47, 113, 255);
 }
 
 .app_body ul li {
@@ -158,6 +164,22 @@ button.blue:hover {
     padding: 4px 0 0 0;
 
     margin: 0 auto;
+}
+
+.app_body ul .error_message {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    padding: 2%;
+    
+    background-color: #770909;
+    border-radius: 4px;
+
+    color: #ffffff;
+
+    cursor: pointer;
 }
 
 .app_footer {
