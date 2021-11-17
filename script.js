@@ -4,8 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
         btnReset = document.getElementById('button-reset'),
         btnAdd = document.getElementById('button-add');
 
-    let itemID = 0;
-
     const createError = function () {
         const obj = document.createElement('div');
 
@@ -58,12 +56,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     itemList.addEventListener('click', function(e) {
-        const target = e.target;
-
+        const target = e.target,
+            items = itemList.querySelectorAll('.item'),
+            itemsDelBtn = itemList.querySelectorAll('.button.red');
+            
         if (target.classList.value === 'span_check' && target.classList.value !== 'checked') {
             target.classList.add('checked');
         } else {
             target.classList.remove('checked');
+        }
+
+        for (let i = 0; i < items.length; i++) {
+            if (target === itemsDelBtn[i]) {
+                items[i].remove();
+            }
         }
     });
 });
